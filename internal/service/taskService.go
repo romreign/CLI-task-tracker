@@ -32,7 +32,6 @@ func (ts *TaskService) Update(idStr string, description string) {
 	id, err := strconv.Atoi(idStr)
 	if err != nil {
 		log.Fatal(err)
-		return
 	}
 	if id < 0 {
 		fmt.Println("id не может быть отрицательным")
@@ -56,7 +55,6 @@ func (ts *TaskService) Delete(idStr string) {
 	id, err := strconv.Atoi(idStr)
 	if err != nil {
 		log.Fatal(err)
-		return
 	}
 	if id < 0 {
 		fmt.Println("id не может быть отрицательным")
@@ -83,7 +81,6 @@ func (ts *TaskService) Mark(status string, idStr string) {
 	id, err := strconv.Atoi(idStr)
 	if err != nil {
 		log.Fatal(err)
-		return
 	}
 	if id < 0 {
 		fmt.Println("id не может быть отрицательным")
